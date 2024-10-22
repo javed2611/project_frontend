@@ -6,24 +6,7 @@
                 <img src="assets/images/logo.jpg" alt="Jk Infotech" class="img-responsive">
             </a>
         </div>
-        <div class="menu-sidebar-content js-scrollbar1">
-            <nav class="navbar-sidebar">
-                <ul class="list-unstyled navbar-list">
-                    <li>
-                        <a href="category/1" routerLinkActive="active-link">Laptops</a>
-                    </li>
-                    <li>
-                        <a href="category/2" routerLinkActive="active-link">Mobiles</a>
-                    </li>
-                    <li>
-                        <a href="category/3" routerLinkActive="active-link">Shirts</a>
-                    </li>
-                    <li>
-                        <a routerLink="category/4" routerLinkActive="active-link">Beauty</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+       <app-productcatergorymenu></app-productcatergorymenu>
     </aside>
     <div class="page-container">
         <!-- HEADER DESKTOP-->
@@ -31,13 +14,7 @@
             <div class="section-content section-content-p30">
                 <div class="container-fluid">
                     <div class="header-wrap">
-                        <form class="form-header" onsubmit="return false;" method="GET">
-                            <input class="au-input au-input-xl" type="text" name="search"
-                                placeholder="Search for data ..." />
-                            <button class="au-btn-submit" type="submit">
-                                Search
-                            </button>
-                        </form>
+                        <app-search></app-search>
                         <div class="cart-area d-n">
                             <a href="shopping-detail.html">
                                 <div class="total">19.22 <span> 2</span> </div> <i class="fa fa-shopping-cart"
@@ -55,7 +32,7 @@
     </div>
     <footer>
         <ul>
-            <li><a href="#">About Us</a></li>
+            <li><a href="https://www.instagram.com/javedkhan_96">About Us</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">Help</a></li>
         </ul>
