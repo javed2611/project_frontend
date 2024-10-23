@@ -4,7 +4,7 @@
  * ----------------------------
  */
 
- * {
+* {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
@@ -639,14 +639,16 @@ input.au-input.au-input-xl {
     padding: 10px;
     border: 1px solid #ccc
 }
-.input-space input[type=password]{
-    width:300%;
-    height:40px;
-    border-radius:30px;
-    outline:0;
-    padding:10px;
-    border:1px solid #ccc
+
+.input-space input[type=password] {
+    width: 300%;
+    height: 40px;
+    border-radius: 30px;
+    outline: 0;
+    padding: 10px;
+    border: 1px solid #ccc
 }
+
 .input-space select {
     width: 300%;
     height: 40px;
