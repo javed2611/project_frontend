@@ -110,5 +110,4 @@ export class CartService {
     localStorage.removeItem(this.cartKey);
     this.updateCartTotals(); // Update totals after clearing the cart
   }
-
 }

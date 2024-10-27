@@ -5,12 +5,13 @@ import { ProductcatergorymenuComponent } from "./productcatergorymenu/productcat
 import { SearchComponent } from "./search/search.component";
 import { CartComponent } from "./cart/cart.component";
 import { CartService } from './services/cart.service';
+import { CheckoutComponent } from './checkout/checkout.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProductListComponent, RouterModule,CommonModule, ProductcatergorymenuComponent, SearchComponent, CartComponent],
+  imports: [RouterOutlet, ProductListComponent, RouterModule,CommonModule, ProductcatergorymenuComponent, SearchComponent, CartComponent,CheckoutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
