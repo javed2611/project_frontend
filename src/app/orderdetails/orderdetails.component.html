@@ -1,0 +1,35 @@
+<div class="main-content page-m">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <div style="width: 900px">
+                <div *ngIf="orderDetails.length > 0; else noOrders">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <td>Order Tracking Number</td>
+                                <td>Total Price</td>
+                                <td>Total Quantity</td>
+                                <td>Date</td>
+                                <td>Expected Delivery Date</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let order of orderDetails">
+                                <td>{{ order.orderTrackingNum }}</td>
+                                <td>{{ order.totalPrice | currency :'INR'}}</td>
+                                <td>{{ order.quantity }}</td>
+                                <td>{{ order.createDate }}</td>
+                                <td>{{order.deilveryDate}}</td>
+                                <td>{{ order.orderStatus }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ng-template #noOrders>
+                    <p>No orders found.</p>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

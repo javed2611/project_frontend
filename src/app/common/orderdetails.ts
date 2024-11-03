@@ -4,7 +4,8 @@ export class Orderdetails {
         public orderStatus:string,
         public totalPrice:number,
         public quantity:number,
-        public createDate:Date
+        public createDate:Date,
+        public deilveryDate:Date
     ){}
 }
 

@@ -1,1 +1,11 @@
-<p>login works!</p>
+<div class="cart-area d-n">
+    <div class="form-header">
+        <button *ngIf="!loginService.isLoggedIn()" [routerLink]="['/login-details']" class="au-btn-submit">
+            Login
+        </button>
+        <button *ngIf="loginService.isLoggedIn()" (click)="loginService.logout()" [routerLink]="['/']" class="au-btn-submit">
+            Logout
+        </button>
+    </div>
+</div>
+

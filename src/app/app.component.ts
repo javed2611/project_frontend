@@ -7,21 +7,37 @@ import { CartComponent } from "./cart/cart.component";
 import { CartService } from './services/cart.service';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CommonModule } from '@angular/common';
+import { LoginserviceService } from './services/loginservice.service';
+import { UserRoleService } from './services/user-role.service';
+import { LoginComponent } from "./login/login.component";
+import { ResetPwdComponent } from './reset-pwd/reset-pwd.component';
+import { RegisterComponent } from './register/register.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProductListComponent, RouterModule,CommonModule, ProductcatergorymenuComponent, SearchComponent, CartComponent,CheckoutComponent],
+  imports: [RouterOutlet,
+    RouterModule,
+    ProductListComponent,
+    CommonModule,
+    ProductcatergorymenuComponent,
+    SearchComponent,
+    CheckoutComponent,
+    LoginComponent,
+    ResetPwdComponent,
+    RegisterComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'Ecommerce_Frontend';
+  userRole: string = '';
   cartQuantity = 0;
-  cartTotal:number = 0;
+  cartTotal: number = 0;
 
-  constructor(private cartService: CartService,) {
+  constructor(private cartService: CartService, private loginService: LoginserviceService, private userRoleService: UserRoleService) {
     // Load session and cart info in the constructor
+    this.loginService.restoreSession();
     this.cartService.loadCart();  // Restore cart from localStorage
     this.updateCartDetails();  // Initialize cart details
   }
@@ -37,7 +53,11 @@ export class AppComponent {
         this.cartTotal = totalPrice;
       }
     );
+    this.userRole = this.userRoleService.getUserRole();
 
+    this.userRoleService.userRole$.subscribe(role => {
+      this.userRole = role;
+    })
   }
   updateCartDetails() {
     // Sync cart totals with service

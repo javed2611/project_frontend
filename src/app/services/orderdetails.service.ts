@@ -14,7 +14,7 @@ export class OrderdetailsService {
 
   findOrdersByEmail(email:string):Observable<Orderdetails[]>
   {
-    const url = `${this.apiUrl}/${email}`;
+    const url = `${this.apiUrl}/getOrderDetails/${email}`;
     return this.httpClient.get<Orderdetails[]>(url);
   }
 

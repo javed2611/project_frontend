@@ -15,10 +15,11 @@
                 <div class="container-fluid">
                     <div class="header-wrap">
                         <app-search></app-search>
+                        <app-login></app-login>
                         <div class="cart-area">
                             <a routerLink="/cart">
                               <div class="total">
-                                {{ cartTotal | currency }} <span>{{ cartQuantity }}</span>
+                                {{ cartTotal | currency :'INR'}} <span>{{ cartQuantity }}</span>
                               </div>
                               <i class="fa fa-shopping-cart"></i>
                             </a>
