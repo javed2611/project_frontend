@@ -1,0 +1,16 @@
+
+
+<div class="menu-sidebar-content js-scrollbar1">
+    <nav class="navbar-sidebar">
+        <ul class="list-unstyled navbar-list">
+            <div *ngIf="isAdmin(); else customerSidebar">
+                <h2>Admin Sidebar</h2>
+                <a routerLink = "/filterOrders" routerLinkActive="active-link">Filter Orders</a>
+              </div>
+            
+        </ul>
+    </nav>
+</div>
+<ng-template #customerSidebar>
+    <app-productcatergorymenu></app-productcatergorymenu>
+</ng-template>

@@ -12,6 +12,7 @@ import { UserRoleService } from './services/user-role.service';
 import { LoginComponent } from "./login/login.component";
 import { ResetPwdComponent } from './reset-pwd/reset-pwd.component';
 import { RegisterComponent } from './register/register.component';
+import { SidebarComponent } from "./sidebar/sidebar.component";
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,7 @@ import { RegisterComponent } from './register/register.component';
     CheckoutComponent,
     LoginComponent,
     ResetPwdComponent,
-    RegisterComponent,],
+    RegisterComponent, SidebarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
